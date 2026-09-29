@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Steven Agri — Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --gold: #ddb683;
+      --gold-ink: #8a6a3c;
+      --ink: #1d1d1d;
+      --muted: #555;
+      --rule: #d9d2c7;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: #282828 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzI4MjgyOCI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIzIiBjeT0iNC4zIiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMi41IiByPSIxLjgiIGZpbGw9IiMzOTM5MzkiPjwvY2lyY2xlPgo8Y2lyY2xlIGN4PSIxMC41IiBjeT0iMTEuMyIgcj0iMS44IiBmaWxsPSJibGFjayI+PC9jaXJjbGU+Cjwvc3ZnPg==");
+      font-family: "Segoe UI", Verdana, Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.4;
+      padding: 24px 16px;
+    }
+    .toolbar {
+      max-width: 850px;
+      margin: 0 auto 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .toolbar a {
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .toolbar a:hover { background: #616161; }
+    .page {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 40px 48px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.5);
+    }
+    header { border-bottom: 3px solid var(--gold); padding-bottom: 10px; margin-bottom: 14px; }
+    h1 { margin: 0; font-size: 30px; letter-spacing: 1px; }
+    .tagline { color: var(--gold-ink); font-weight: bold; margin: 2px 0 8px; font-size: 15px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 13px; color: var(--muted); }
+    .contact a { color: inherit; text-decoration: none; }
+    .contact .fa { color: var(--gold-ink); margin-right: 4px; }
+    h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-ink);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      margin: 16px 0 8px;
+    }
+    p { margin: 0 0 6px; font-size: 14px; }
+    ul { margin: 2px 0 8px; padding-left: 18px; }
+    li { font-size: 13.5px; margin-bottom: 2px; }
+    .item { margin-bottom: 8px; break-inside: avoid; }
+    .item-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .item-head strong { font-size: 14.5px; }
+    .item-head span { font-size: 13px; color: var(--muted); white-space: nowrap; }
+    .stack { font-size: 12.5px; color: var(--muted); font-style: italic; }
+    .skills { display: grid; grid-template-columns: max-content 1fr; gap: 3px 12px; font-size: 13.5px; }
+    .skills dt { font-weight: bold; }
+    .skills dd { margin: 0; }
+    .certs li span { color: var(--muted); }
+    .note { font-size: 12.5px; color: var(--muted); font-style: italic; }
+
+    @media (max-width: 600px) {
+      .page { padding: 24px 18px; }
+      h1 { font-size: 24px; }
+      .skills { grid-template-columns: 1fr; }
+      .skills dd { margin-bottom: 6px; }
+    }
+
+    @media print {
+      @page { size: letter; margin: 0.45in 0.5in; }
+      body { background: #fff; padding: 0; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; padding: 0; max-width: none; }
+      h1 { font-size: 24px; }
+      .tagline { font-size: 13px; margin-bottom: 4px; }
+      .contact { font-size: 11px; }
+      h2 { font-size: 11.5px; margin: 9px 0 4px; }
+      p { font-size: 11px; margin-bottom: 3px; }
+      li { font-size: 10.6px; margin-bottom: 1px; }
+      ul { margin: 1px 0 4px; }
+      .item { margin-bottom: 4px; }
+      .item-head strong { font-size: 11.5px; }
+      .item-head span, .stack, .note { font-size: 10.2px; }
+      .skills { font-size: 10.6px; gap: 1px 10px; }
+      header { padding-bottom: 6px; margin-bottom: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="toolbar">
+    <a href="/index.html">« Home</a>
+    <a href="/PDF/Steven_Agri_Resume.pdf">Download PDF</a>
+  </nav>
+
+  <main class="page">
+    <header>
+      <h1>STEVEN AGRI</h1>
+      <div class="tagline">Security · Networking · Embedded Systems &amp; IoT</div>
+      <div class="contact">
+        <span><i class="fa fa-map-marker"></i>Wheeling, West Virginia</span>
+        <a href="https://github.com/gubna"><i class="fa fa-github"></i>github.com/gubna</a>
+        <a href="https://www.linkedin.com/in/steven-agri-242b0431/"><i class="fa fa-linkedin"></i>linkedin.com/in/steven-agri-242b0431</a>
+        <a href="https://stevenagri.com"><i class="fa fa-globe"></i>stevenagri.com</a>
+        <a href="mailto:stevenagri1@gmail.com"><i class="fa fa-envelope"></i>stevenagri1@gmail.com</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p>
+        Hands-on technologist focused on security, with a strong interest in OSINT and wireless.
+        Builds and tests real hardware: Wi-Fi auditing rigs, ESP32 firmware, sub-GHz radio tools and
+        Home Assistant automations, all on equipment I own. Uses AI coding tools to build AI assistants,
+        flight trackers and security tools. Brings years of fast-paced, customer-facing
+        hospitality experience and the patience, planning and composure of full-time parenting.
+        Seeking help desk / IT support, SOC analyst or IoT security roles.
+      </p>
+    </section>
+
+    <section>
+      <h2>Security &amp; Embedded Projects</h2>
+
+      <div class="item">
+        <div class="item-head"><strong>Wi-Fi Wardriving &amp; Packet Capture Rig (Pwnagotchi)</strong></div>
+        <ul>
+          <li>Built a portable Raspberry Pi Zero W unit with an e-ink display, a USB Wi-Fi adapter in monitor mode and GPS.</li>
+          <li>Wardrove to collect geotagged 802.11 captures (.pcap) and analyzed traffic and handshakes in Wireshark; all testing on my own networks.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><strong>DIY Flipper Zero Alternative (ESP32 + CC1101)</strong></div>
+        <ul>
+          <li>Assembled an ESP32 multi-tool running Bruce and Marauder firmware to study Wi-Fi, Bluetooth LE and sub-GHz radio.</li>
+          <li>Used the CC1101 radio to capture and replay signals from my own devices, turning it into a universal remote, then tied those devices into Home Assistant automations.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><strong>AI Voice Assistant &amp; Home Automation</strong></div>
+        <ul>
+          <li>Built a Home Assistant voice satellite on a Seeed XIAO ESP32-S3 with ESPHome and on-device wake-word detection.</li>
+          <li>Used AI coding tools to build AI assistants, and created many Home Assistant automations using its REST API.</li>
+          <li>Designed an ESP32 touchscreen control panel (ESPHome, ILI9xxx display, XPT2046 touch) for a smart speaker, iterating through 10 revisions.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><strong>Surveillance Detection &amp; OSINT Tools</strong></div>
+        <ul>
+          <li>Deployed and evaluated open-source BLE/Wi-Fi surveillance-detection firmware (OUI-Spy, Flock-You) on the ESP32-S3.</li>
+          <li>Wrote a Shodan API module for an ESP32 display with a caching state machine that conserves query credits.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><strong>ESP32 Display Firmware</strong></div>
+        <ul>
+          <li>Real-time ADS-B flight radar on a round GC9A01 display, fed by the OpenSky Network API (XIAO ESP32-S3).</li>
+          <li>ESP32-C3 Wi-Fi dashboard rotating weather, markets, sports and news cards pulled from public REST APIs and RSS.</li>
+        </ul>
+        <div class="stack">C/C++, PlatformIO, Arduino, LovyanGFX, SPI displays, LittleFS</div>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><strong>Home Lab &amp; Self-Hosting</strong></div>
+        <ul>
+          <li>Set up a WireGuard VPN, an Unbound recursive DNS resolver, NextCloud, Docker and a LAMP stack; designed a small home/office network. Documented each build at stevenagri.com.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <dt>Security &amp; OSINT</dt>
+        <dd>Wireshark, packet capture &amp; analysis, wireless auditing (802.11, BLE, sub-GHz), Shodan, Bruce, Marauder, Pwnagotchi</dd>
+        <dt>Networking</dt>
+        <dd>TCP/IP, DNS, VPN (WireGuard), Wi-Fi, SOHO routing &amp; firewalls</dd>
+        <dt>Embedded &amp; IoT</dt>
+        <dd>ESP32 (S3, C3, WROOM), Raspberry Pi, CC1101, ESPHome, Home Assistant, C/C++, PlatformIO</dd>
+        <dt>Systems &amp; Tools</dt>
+        <dd>Linux (Arch, Ubuntu), Docker, Git/GitHub, Bash, Python, HTML/CSS/JavaScript, AI-assisted development</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="item-head"><strong>Stay-at-Home Parent &amp; Independent Study</strong><span>2020 – Present</span></div>
+        <ul>
+          <li>Full-time caregiver while building the security, networking and embedded projects listed above.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head"><strong>Hospitality Industry</strong><span>Before 2020</span></div>
+        <ul>
+          <li>Worked in fast-paced, customer-facing roles; stayed calm under pressure and worked well as part of a team.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul class="certs">
+        <li><strong>CompTIA Security+</strong> <span>— currently studying (current exam version)</span></li>
+        <li><strong>CompTIA Network+ ce</strong> <span>— earned Aug 2018 (active through Aug 2021)</span></li>
+        <li><strong>CompTIA A+ ce</strong> <span>— earned Jan 2018 (active through Jan 2021)</span></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
